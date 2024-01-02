@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+}
+.slide {
+    height: 100%;
+    width: 175px;
+    position: absolute;
+    background-color: #fff;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+}
+h1 {
+    color: darkblue;
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+}/*
+ul li {
+    list-style: none;
+}
+ul li a {
+    color: darkblue;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+ul li:hover a {
+    color: #fff;
+    background-color: darkgoldenrod;
+}
+ul li a i {
+    width: 40px;
+    text-align: center;
+} */
+.menu ul li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: darkblue;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.menu ul li > a:hover,
+.menu ul li.active > a {
+    color: black;
+    background-color: #f6f6f6;
+}
+.menu ul li.icon {
+    font-size: 20px;
+}
+.menu ul li.text {
+    flex: 1;
+}
+.menu ul li.arrow {
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.menu ul li.active .arrow {
+    transform: rotate(180deg);
+}
+.menu .sub-menu {
+    display: none;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-left: 1px solid #f6f6f6;
+}
+.menu .sub-menu li a {
+    padding: 10px 8px;
+    font-size: 12px;
+}
+
+
+input {
+    display: none;
+    visibility: hidden;
+   /* -webkit-appearance: none; */
+} 
+.toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 40px;
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #8000ff;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.toggle .top_line {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .middle_line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.toggle .bottom_line {
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line {
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line {
+    opacity: 0;
+    transform: translateX(20px);
+}
+input:checked ~ .slide {
+    transform: translateX(0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/*=======================SHEN: Try nio nga d2=======================*/
+body {
+    font-weight: 400;
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+/*=======================Menu=======================*/
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin-right: 15px; /* Add some space between brand and toggle button */
+}
+
+.navbar-brand img {
+    max-height: 90px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    .navbar-header {
+        float: none; /* Reset float for the header */
+    }
+}
+.navbar {
+    padding: 22px 0px;
+    background-color: rgb(269, 240, 0)  !important;
+    border-bottom: none !important;
+}
+.navbar ul li a {
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 500;
+    font-weight:bold;
+    font-size: 15px;
+    transition: all 0.3s ease-in;
+}
+.navbar ul li a:hover{
+    color: blue !important; 
+}
+.navbar-toggle .icon-bar {
+    background-color: white !important; 
+    height: 2px !important;
+}
+.navbar-toggle {
+    border: 1px solid-white !important;
+    transition: all 0.3s ease-in;
+    border-color: white !important;
+}
+.navbar-toggle:hover {
+    background-color: rgb(269, 200, 0) !important;
+}
+.navbar-inverse .navbar-collapse {
+    border-color: transparent !important;
+}
+
+/*=======================Menu Ends=======================*/
+
+
+/*=======================Slider=======================*/
+
+.slider {
+    width: 100%;
+    height: 700px;
+    background-image: url(..//img/Slider.png);
+    background-size: cover;
+    background-position: center;
+}
+.slider-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    position: relative;
+}
+/*=======================Slider Ends=======================*/
